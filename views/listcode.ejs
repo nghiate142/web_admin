@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODE</title>
+</head>
+<body>
+    <form class="form">
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>code</th>
+                <th>machine_code:</th>
+                <th>Option:</th>
+            </tr>
+            <% codes.forEach(item => { %>
+                <tr>
+                    <td><%= item._id  %></td>
+                    <td><%= item.code  %></td>
+                    <td><%= item.machine_code %></td>
+                    <td><a href="/delete-code/<%= item._id  %>">Delete Code</a></td>
+                </tr>
+            <% }) %>
+        </table>
+        <a href="/add-code">Create Code</a>
+
+    </form>
+</body>
+</html>
